@@ -11,7 +11,6 @@ import DynamicComponent from '../components/dynamic-component';
 import DynamicComponentFromState from '../components/dynamic-component-state';
 import {addTodo, addComponent, toggleTodo} from '../store/actions';
 import {useDispatch, useSelector} from 'react-redux';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {fetchComponent} from '../utils';
 
 const HomePage = ({navigation}) => {
@@ -85,7 +84,6 @@ const HomePage = ({navigation}) => {
           alignItems: 'center',
         }}>
         <Input
-          leftIcon={<Icon name="calendar-check" size={20} />}
           placeholder="Enter Todo"
           containerStyle={{flex: 1, marginTop: 8}}
           onChangeText={text => setTodoText(text)}
@@ -96,7 +94,6 @@ const HomePage = ({navigation}) => {
             addTodoToStore();
             setTodoText('');
           }}
-          icon={<Icon name="plus-box" size={20} color="white" />}
           title=" Add"
         />
       </View>
